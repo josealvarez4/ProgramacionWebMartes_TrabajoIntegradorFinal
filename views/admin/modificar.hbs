@@ -1,0 +1,50 @@
+<div class="container" style="margin: 2% auto">
+    <div class="row">
+        <div class="col-6 offset-3">
+            <h4 style="text-align: center; margin-bottom: 4%;">Modificar Noticia</h4>
+            <form action="/admin/noticias/modificar" method="post" enctype="multipart/form-data">
+                <input type="hidden" value="{{noticia.id}}" name="id">
+                <div class="mb-3" style="text-align: center;">
+                    <input type="hidden" name="img_original" value="{{noticia.img_id}}">
+                </div>
+                <div class="mb-3" style="text-align: center;">
+                    <label>Imagen: <input type="file" name="imagen" id="imagen" /></label>
+                </div>
+                <div class="mb-3" style="text-align: center;">
+                    <label><input type="checkbox" name="img_delete" id="img_delete" value="1"> Eliminar imagen actual?</label>
+                </div>
+                <div class="mb-3">
+                    <h6># Noticia</h6>
+                    <input type="text" class="form-control" value="{{noticia.id}}" placeholder="# Noticia"
+                        name="id_nuevo">
+                </div>
+                <div class="mb-3">
+                    <h6>Titulo</h6>
+                    <input type="text" class="form-control" value="{{noticia.titulo}}" placeholder="Titulo"
+                        name="titulo">
+                </div>
+                <div class="mb-3">
+                    <h6>Subtitulo</h6>
+                    <textarea type="text" class="form-control" placeholder="Subtitulo"
+                        name="subtitulo">{{noticia.subtitulo}}</textarea>
+                </div>
+                <div class="mb-3">
+                    <h6>Cuerpo</h6>
+                    <textarea type="text" class="form-control" placeholder="Cuerpo"
+                        name="cuerpo">{{noticia.cuerpo}}</textarea>
+                </div>
+                <div class="row">
+                    <div class="col text-left">
+                        <button type="submit" class="btn btn-primary">Modificar</button>
+                    </div>
+                    <div class="col text-end">
+                        <a href="/admin/noticias"><button type="button" class="btn btn-primary">Volver</button></a>
+                    </div>
+                </div>
+            </form>
+            {{#if error}}
+                <h5 style="text-align: center;">{{message}}</h5>
+            {{/if}}
+        </div>
+    </div>
+</div>

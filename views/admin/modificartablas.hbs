@@ -1,0 +1,110 @@
+<div class="container" style="margin: 2% auto">
+    {{#if mostrarbasket}}
+    <div class="row">
+        <div class="col-9 offset-1">
+            <h4 style="margin-bottom: 4%; text-align: center;">Modificar Equipo</h4>
+            <form action="/admin/tablas/modificarequipo" method="post" enctype="multipart/form-data">
+                <input type="hidden" value="{{equipo.id}}" name="id">
+                <div class="mb-3" style="text-align: center;">
+                    <input type="hidden" name="img_original" value="{{equipo.logos}}">
+                </div>
+                <div class="row mb-3">
+                    <div class="col-lg col-md-3 col-sm-6 col-xs-12 text-center" style=" font-weight: bold;">Pos<input type="text" class="form-control" name="id_nuevo"
+                            style="text-align: center;" value="{{equipo.id}}"></div>
+                    <div class="col-lg-3 col-md-6 col-sm-6 col-xs-12 text-center" style=" font-weight: bold;">Equipo<input type="text" class="form-control" name="equipo"
+                            style="text-align: center;" value="{{equipo.equipo}}"></div>
+                    <div class="col-lg col-md-3 col-sm-6 col-xs-12 text-center" style=" font-weight: bold;">Ptos<input type="text" class="form-control" name="puntos"
+                            style="text-align: center;" value="{{equipo.puntos}}"></div>
+                    <div class="col-lg col-md-3 col-sm-6 col-xs-12 text-center" style=" font-weight: bold;">PJ<input type="text" class="form-control" name="jugados"
+                            style="text-align: center;" value="{{equipo.jugados}}"></div>
+                    <div class="col-lg col-md-3 col-sm-6 col-xs-12 text-center" style=" font-weight: bold;">PG<input type="text" class="form-control" name="ganados"
+                            style="text-align: center;" value="{{equipo.ganados}}"></div>
+                    <div class="col-lg col-md-3 col-sm-6 col-xs-12 text-center" style=" font-weight: bold;">PP<input type="text" class="form-control" name="perdidos"
+                            style="text-align: center;" value="{{equipo.perdidos}}"></div>
+                    <div class="col-lg col-md-3 col-sm-6 col-xs-12 text-center" style=" font-weight: bold;">Ppp<input type="text" class="form-control" name="ppp"
+                            style="text-align: center;" value="{{equipo.ppp}}"></div>
+                    <div class="col-lg col-md-3 col-sm-6 col-xs-12 text-center" style=" font-weight: bold;">Pcpp<input type="text" class="form-control" name="pcpp"
+                            style="text-align: center;" value="{{equipo.pcpp}}"></div>
+                </div>
+                <div class="mb-3 text-center"><img src="{{equipo.logos}}" alt="">{{{equipo.logo}}}</div>
+                <div class="mb-3 text-center">
+                    <label>CAMBIAR LOGO CLUB: <input type="file" name="imagen" id="imagen" /></label>
+                </div>
+                <div class="mb-3" style="text-align: center;">
+                    <label><input type="checkbox" name="img_delete" id="img_delete" value="1"> Eliminar imagen
+                        actual?</label>
+                </div>
+                <div class="row">
+                    <div class="col text-center">
+                        <button type="submit" class="btn btn-primary">Modificar</button>
+                    </div>
+                    <div class="col text-center">
+                        <a href="/admin/tablas"><button type="button" class="btn btn-primary">Volver</button></a>
+                    </div>
+                </div>
+            </form>
+            {{#if error}}
+            <h5 style="text-align: center;">{{message}}</h5>
+            {{/if}}
+        </div>
+    </div>
+    {{/if}}
+
+    {{#if mostrarhockey}}
+    <div class="row" style="margin: auto 15%;">
+        <div class="col-8 offset-2">
+            <h4 style="margin-bottom: 4%; text-align: center;">Modificar Equipo</h4>
+            <form action="/admin/tablas/modificarhockey" method="post" enctype="multipart/form-data">
+                <input type="hidden" value="{{equipoh.id}}" name="id">
+                <div class="row mb-3">
+                    <div class="col-lg-2 col-md-12 text-center" style=" font-weight: bold;">Pos<input type="text" class="form-control" name="id_nuevo"
+                            style="text-align: center;" value="{{equipoh.id}}"></div>
+                    <div class="col-lg-7 col-md-12 text-center" style=" font-weight: bold;">Equipo<input type="text" class="form-control" name="equipo"
+                            style="text-align: center;" value="{{equipoh.equipo}}"></div>
+                    <div class="col-lg-3 col-md-12 text-center" style=" font-weight: bold;">Puntos<input type="text" class="form-control" name="puntos"
+                            style="text-align: center;" value="{{equipoh.puntos}}"></div>
+                </div>
+                <div class="row">
+                    <div class="col text-left">
+                        <button type="submit" class="btn btn-primary">Modificar</button>
+                    </div>
+                    <div class="col text-end">
+                        <a href="/admin/tablas"><button type="button" class="btn btn-primary">Volver</button></a>
+                    </div>
+                </div>
+            </form>
+            {{#if error}}
+            <h5 style="text-align: center;">{{message}}</h5>
+            {{/if}}
+        </div>
+    </div>
+    {{/if}}
+
+    {{#if mostrarfutbol}}
+    <div class="row">
+        <div class="col-8 offset-2">
+            <h4 style="margin-bottom: 4%; text-align: center;">Modificar Tabla</h4>
+            <form action="/admin/tablas/modificarfutbol" method="post" enctype="multipart/form-data">
+                <input type="hidden" value="{{tabla.id}}" name="id">
+                <div class="mb-3" style="text-align: center;">
+                    <input type="hidden" name="img_originalfutbol" value="{{tabla.img_tabla}}">
+                </div>
+                <div class="mb-3 text-center">
+                    <label>CAMBIAR TABLA: <input type="file" name="imagentabla" id="imagentabla" /></label>
+                </div>
+                <div class="row">
+                    <div class="col text-left">
+                        <button type="submit" class="btn btn-primary">Modificar</button>
+                    </div>
+                    <div class="col text-end">
+                        <a href="/admin/tablas"><button type="button" class="btn btn-primary">Volver</button></a>
+                    </div>
+                </div>
+            </form>
+            {{#if error}}
+            <h5 style="text-align: center;">{{message}}</h5>
+            {{/if}}
+        </div>
+    </div>
+    {{/if}}
+</div>

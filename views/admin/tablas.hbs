@@ -1,0 +1,153 @@
+<div class="container" style="margin-top: 1%;">
+    <div class="row text-center">
+        <h2>Tablas de Posiciones</h2>
+    </div>
+    <div class="row text-center">
+        <div class="col-lg-4 col-md-4 col-sm-4 col-4" style="padding: 1% 0;">
+            <button class="btn btn-danger" type="button" data-bs-toggle="collapse" data-bs-target="#collapseExample1"
+                aria-expanded="true" aria-controls="collapseExample" id="bbasket">BASKET</button>
+        </div>
+        <div class="col-lg-4 col-md-4 col-sm-4 col-4" style="padding: 1% 0;">
+            <button class="btn btn-danger collapsed" type="button" data-bs-toggle="collapse"
+                data-bs-target="#collapseExample2" aria-expanded="false" aria-controls="collapseExample"
+                id="bfutbol">FUTBOL</button>
+        </div>
+        <div class="col-lg-4 col-md-4 col-sm-4 col-4" style="padding: 1% 0;">
+            <button class="btn btn-danger collapsed" type="button" data-bs-toggle="collapse"
+                data-bs-target="#collapseExample3" aria-expanded="false" aria-controls="collapseExample"
+                id="bvoley">HOCKEY</button>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="basket collapse show" id="collapseExample1">
+            <div class="row" style="text-align: right; margin-bottom: 1%; margin-top: 1.5%">
+                <div class="col">
+                    <a href="/admin/tablas/agregarbasket" class="btn btn-success" style="font-size: small;"><i
+                            class="fas fa-plus"> Nuevo</i></a>
+                </div>
+            </div>
+
+            <table class="table">
+                <thead>
+                    <tr class="table-dark">
+                        <th scope="col">POS</th>
+                        <th scope="col">Imagen</th>
+                        <th scope="col">Equipo</th>
+                        <th scope="col">Puntos</th>
+                        <th scope="col">PJ</th>
+                        <th scope="col">PG</th>
+                        <th scope="col">PP</th>
+                        <th scope="col">PPP</th>
+                        <th scope="col">PCPP</th>
+                        <th scope="col" class="text-end">Acciones</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {{#each tablas}}
+                    <tr>
+                        <th scope="row">{{id}}</th>
+                        <td>{{{imagen}}}</td>
+                        <td>{{equipo}}</td>
+                        <td>{{puntos}}</td>
+                        <td>{{jugados}}</td>
+                        <td>{{ganados}}</td>
+                        <td>{{perdidos}}</td>
+                        <td>{{ppp}}</td>
+                        <td>{{pcpp}}</td>
+                        <td class="text-end">
+                            <a href="/admin/tablas/modificarequipo/{{id}}" class="btn btn-secondary"><i
+                                    class="fas fa-pencil-alt"></i></a>
+                            <a href="/admin/tablas/eliminarequipo/{{id}}" class="btn btn-secondary"><i
+                                    class="fas fa-trash"></i></a>
+                        </td>
+                    </tr>
+                    {{/each}}
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <div class="row text-center" style="padding-left: 20%; padding-right: 20%;">
+        <div class="futbol collapse" id="collapseExample2">
+            <div class="row" style="margin-top: 1.5%;">
+                <div class="mb-3">
+                    <div class="col">
+                        <a href="/admin/tablas/agregarfutbol" class="btn btn-success" style="font-size: small;"><i
+                            class="fas fa-plus"> Nuevo</i></a>
+                    </div>
+                </div>
+            </div>
+            {{#each tablafutbol}}
+            <div class="row mb-3">
+                <div class="row"><img src="{{{imagenf}}}" alt="">{{{imagenf}}}</div>
+                <div class="row-6" style="margin: 1.5% auto;">
+                    <a href="/admin/tablas/modificarfutbol/{{id}}" class="btn btn-secondary"><i class="fas fa-pencil-alt"></i></a>
+                    <a href="/admin/tablas/eliminarfutbol/{{id}}" class="btn btn-secondary"><i class="fas fa-trash"></i></a>
+                </div>
+                <hr>
+            </div>
+            {{/each}}
+        </div>
+    </div>
+
+    <div class="row" style="padding-left: 20%; padding-right: 20%;">
+        <div class="voley collapse" id="collapseExample3">
+            <div class="row" style="text-align: right; margin-bottom: 1%; margin-top: 1.5%;">
+                <div class="col">
+                    <a href="/admin/tablas/agregarhockey" class="btn btn-success" style="font-size: small;"><i
+                            class="fas fa-plus"> Nuevo</i></a>
+                </div>
+            </div>
+
+            <table class="table">
+                <thead>
+                    <tr class="table-dark">
+                        <th scope="col">POS</th>
+                        <th scope="col">Equipo</th>
+                        <th scope="col">Puntos</th>
+                        <th scope="col" class="text-end">Acciones</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {{#each tablahockey}}
+                    <tr>
+                        <th scope="row">{{id}}</th>
+                        <td>{{equipo}}</td>
+                        <td>{{puntos}}</td>
+                        <td class="text-end">
+                            <a href="/admin/tablas/modificarhockey/{{id}}" class="btn btn-secondary"><i
+                                    class="fas fa-pencil-alt"></i></a>
+                            <a href="/admin/tablas/eliminarhockey/{{id}}" class="btn btn-secondary"><i
+                                    class="fas fa-trash"></i></a>
+                        </td>
+                    </tr>
+                    {{/each}}
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+</div>
+
+<script>
+    var futbol = document.getElementsByClassName('futbol')[0];
+    var basket = document.getElementsByClassName('basket')[0];
+    var voley = document.getElementsByClassName('voley')[0];
+
+    bfutbol.addEventListener('click', function () {
+        basket.classList.remove('show');
+        voley.classList.remove('show');
+    });
+
+    bbasket.addEventListener('click', function () {
+        futbol.classList.remove('show');
+        voley.classList.remove('show');
+    });
+
+    bvoley.addEventListener('click', function () {
+        basket.classList.remove('show');
+        futbol.classList.remove('show');
+    });
+
+</script>

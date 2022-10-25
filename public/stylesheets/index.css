@@ -1,0 +1,82 @@
+html {
+    scroll-behavior: smooth;
+}
+
+.scroll_section {
+    scroll-margin-top: 44px;
+    
+}
+
+
+/* LOGO CLUB */
+#redsoc{
+    color: black;
+}
+
+#redsoc:hover{
+    color: gray;
+}
+/* LOGO CLUB */
+
+/* BARRA DE NAVEGACION */
+.nav-item:hover{
+    color: red;
+    border: 1px solid;
+    border-radius: 0.375rem;
+}
+
+.buscar{
+    border-color: red;
+}
+
+.bbuscar{
+    color: red;
+    padding: 6px 12px;
+    border-color: red;
+}
+
+.bbuscar:hover{
+    color:white;
+    background-color: red;
+    border-color: red;
+}
+
+.dropdown-item:hover{
+    color: red;
+}
+/* BARRA DE NAVEGACION */
+
+/* CALENDARIO */
+.anterior{
+    padding-bottom: 3.5%;
+    background-color: #f0f0f0;
+}
+/* CALENDARIO */
+
+/* PIE DE PAGINA */
+footer{
+    padding-top: 0.5%;
+    padding-bottom: 0.5%;
+    background-color: grey;
+    font-weight: bold;
+}
+
+footer p{
+    margin: 0;
+}
+/* PIE DE PAGINA */
+
+/* NOTICIA */
+.noticia {
+    margin-top: 3.5%;
+    margin-bottom: 3.5%;
+}
+/* NOTICIA */
+
+.noticialink {
+    color: black;
+  }
+  
+  .noticialink:hover {
+    color: blue;
+  }

@@ -1,0 +1,231 @@
+<!-- IMAGENES DEL CLUB -->
+<div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel" data-bs-interval="4000">
+    <div class="carousel-indicators">
+        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active"
+            aria-current="true" aria-label="Slide 1"></button>
+        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
+            aria-label="Slide 2"></button>
+        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"
+            aria-label="Slide 3"></button>
+        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="3"
+            aria-label="Slide 4"></button>
+        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="4"
+            aria-label="Slide 5"></button>
+    </div>
+    <div class="carousel-inner">
+        <div class="carousel-item active">
+            <img src="images/Sede.jpg" class="d-block w-100" alt="...">
+        </div>
+        <div class="carousel-item">
+            <img src="images/FelixColombo1.jpg" class="d-block w-100" alt="...">
+        </div>
+        <div class="carousel-item">
+            <img src="images/FelixColombo2.jpg" class="d-block w-100" alt="...">
+        </div>
+        <div class="carousel-item">
+            <img src="images/Hipico.jpg" class="d-block w-100" alt="...">
+        </div>
+        <div class="carousel-item">
+            <img src="images/Sintetico.jpg" class="d-block w-100" alt="...">
+        </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
+        data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators"
+        data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+    </button>
+</div>
+
+<!-- TABLAS Y NOTICIAS -->
+<div class="container scroll_section" id="TablasyNoticias" style="margin-top: 2%;">
+    <div class="row tablas">
+        <div class="col-lg-4">
+            <div class="row text-center" style="margin-bottom: 2.5%;">
+                <h5>TABLAS DE POSICIONES</h5>
+            </div>
+
+            <div class="row text-center">
+                <div class="col-lg-4 col-md-4 col-sm-4 col-4" style="padding: 1% 0;">
+                    <button class="btn btn-primary" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapseExample1" aria-expanded="true" aria-controls="collapseExample"
+                        id="bbasket">BASKET</button>
+                </div>
+                <div class="col-lg-4 col-md-4 col-sm-4 col-4" style="padding: 1% 0;">
+                    <button class="btn btn-primary collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapseExample2" aria-expanded="false" aria-controls="collapseExample"
+                        id="bfutbol">FUTBOL</button>
+                </div>
+                <div class="col-lg-4 col-md-4 col-sm-4 col-4" style="padding: 1% 0;">
+                    <button class="btn btn-primary collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapseExample3" aria-expanded="false" aria-controls="collapseExample"
+                        id="bvoley">HOCKEY</button>
+                </div>
+            </div>
+
+            <div class="row" style="padding: 2% 0;">
+                <div class="basket collapse show" id="collapseExample1" style="border: solid 1px black;">
+                    <div class="row text-center">
+                        <h5>TORNEO ASB OFICIAL</h5>
+                        <h6>ZONA A1 MAYORES</h6>
+                    </div>
+                    <div class="row" style="background: black; color: white; font-weight: 500; padding: 2% 0;">
+                        <div class="col-1 text-center" style="padding: 0; font-size: 80%;">POS
+                        </div>
+                        <div class="col-1"></div>
+                        <div class="col-4 text-left" style="font-size: 80%;">EQUIPO</div>
+                        <div class="col-1 text-center" style="padding: 0; font-size: 80%;">PTOS
+                        </div>
+                        <div class="col-1 text-center" style="padding: 0; font-size: 80%;">PJ
+                        </div>
+                        <div class="col-1 text-center" style="padding: 0; font-size: 80%;">PG
+                        </div>
+                        <div class="col-1 text-center" style="padding: 0; font-size: 80%;">PP
+                        </div>
+                        <div class="col-1 text-center" style="padding: 0; font-size: 80%;">PPP
+                        </div>
+                        <div class="col-1 text-center" style="padding: 0; font-size: 80%;">PCPP
+                        </div>
+                    </div>
+                    {{#each tablas}}
+                    <div class="row"
+                        style="padding: 2% 0; align-items: center; {{#if espar}} background: lightcoral; {{/if}}">
+                        <div class="col-1 text-center" style="padding: 0; font-size: 80%;">{{id}}</div>
+                        <div class="col-1 text-center" style="padding: 0;">
+                            <img src="{{logo}}" style="width: 70%;">
+                        </div>
+                        <div class="col-4 text-left" style="padding-left: 1%; font-size: 80%;">{{equipo}}</div>
+                        <div class="col-1 text-center" style="padding: 0; font-size: 80%;">{{puntos}}</div>
+                        <div class="col-1 text-center" style="padding: 0; font-size: 80%;">{{jugados}}</div>
+                        <div class="col-1 text-center" style="padding: 0; font-size: 80%;">{{ganados}}</div>
+                        <div class="col-1 text-center" style="padding: 0; font-size: 80%;">{{perdidos}}</div>
+                        <div class="col-1 text-center" style="padding: 0; font-size: 80%;">{{ppp}}</div>
+                        <div class="col-1 text-center" style="padding: 0; font-size: 80%;">{{pcpp}}</div>
+                    </div>
+                    {{/each}}
+                </div>
+                <div class="futbol collapse" id="collapseExample2">
+                    {{#each tablafutbol}}
+                    <div class="row">{{{imagenf}}}</div>
+                    <hr>
+                    {{/each}}
+                </div>
+                <div class="voley collapse" id="collapseExample3" style="border: solid 1px black;">
+                    <div class="row text-center">
+                        <h5>TORNEO ASH OFICIAL</h5>
+                        <h6>ZONA ESTIMULO PRIMERA DIVISION</h6>
+                    </div>
+                    <div class="row" style="background: black; color: white; font-weight: 500; padding: 2% 0;">
+                        <div class="col-1 text-center" style="padding: 0; font-size: 80%;">POS
+                        </div>
+                        <div class="col-9 text-left" style="font-size: 80%;">EQUIPO</div>
+                        <div class="col-2 text-center" style="padding: 0; font-size: 80%;">PTOS</div>
+                    </div>
+                    {{#each tablahockey}}
+                    <div class="row"
+                        style="padding: 2% 0; align-items: center; {{#if espar}} background: lightcoral; {{/if}}">
+                        <div class="col-1 text-center" style="padding: 0; font-size: 80%; font-weight: bold;">{{id}}</div>
+                        <div class="col-9 text-left" style="padding-left: 1%; font-size: 80%;">{{equipo}}</div>
+                        <div class="col-2 text-center" style="padding: 0; font-size: 80%;">{{puntos}}</div>
+                        <hr>
+                    </div>
+                    {{/each}}
+                </div>
+            </div>
+        </div>
+
+        <div class="col-lg-8">
+            <div class="row" style="padding-left: 2.5%;">
+                <h5>NOTICIAS</h5>
+            </div>
+            <div class="row">
+                {{#each noticias}}
+                <div class="col-lg-6 col-md-6 col-sm-6 col-6">
+                    <div class="card noticia" style="min-height: 28rem;">
+                        <img src="{{imagen}}" class="card-img-top" alt="..." style="height: 200px; width: 100%;">
+                        <div class="card-body">
+                            <h5 class="card-title">{{titulo}}</h5>
+                            <p class="card-text">{{subtitulo}}</p>
+                            <a href="noticias/noticia/{{id}}" class="btn btn-primary">Leer...</a>
+                        </div>
+                    </div>
+                </div>
+                {{/each}}
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- UBICACION -->
+<div class="scroll_section" id="ubicacion" style="margin: 3% 10%;">
+    <h3>Ubicacion</h3>
+    <div class="row" style="padding-top: 3%;">
+        <div class="col-lg-6">
+            <img src="images/sede1.jpeg" alt="" style="width: 65%">
+            <p style="font-weight: bold; text-decoration: underline;">Sede Social:</p>
+            <p>Av. Iriondo 2499</p>
+            <p>Telefono: 03498 - 427546</p>
+        </div>
+        <div class="col-lg-6">
+            <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1713.7272504739956!2d-60.593447508903644!3d-30.789886199999994!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x944ad7d2671e299b%3A0x93342d528bebb61e!2sGdor.%20Iriondo%202499%2C%20S3040CPK%20San%20Justo%2C%20Santa%20Fe!5e0!3m2!1ses!2sar!4v1660688522661!5m2!1ses!2sar"
+                width="75%" style="border:0; aspect-ratio: 1.2;" allowfullscreen="" loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+    </div>
+    <div class="row" style="border-top: 1px solid; padding-top: 3%;">
+        <div class="col-lg-6">
+            <img src="images/complejo_deportivo.jpeg" alt="" style="width: 65%">
+            <p style="font-weight: bold; text-decoration: underline;">Complejo de Deportes:</p>
+            <p>Urquiza y Nicolas Figueredo</p>
+            <p>Telefono: 03498 - 427273</p>
+        </div>
+        <div class="col-lg-6">
+            <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1713.6955017276023!2d-60.59068632889507!3d-30.791667499999985!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x944ad7d332d6412d%3A0xae0fa02920876032!2sN.%20Figueredo%20%26%20General%20Urquiza%2C%20S3040%20San%20Justo%2C%20Santa%20Fe!5e0!3m2!1ses!2sar!4v1660689430049!5m2!1ses!2sar"
+                width="75%" style="border:0; aspect-ratio: 1.2;" allowfullscreen="" loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+    </div>
+    <div class="row" style="border-top: 1px solid; padding-top: 3%;">
+        <div class="col-lg-6">
+            <img src="images/Polideportivo.jpeg" alt="" style="width: 75%">
+            <p style="font-weight: bold; text-decoration: underline;">Complejo Polideportivo:</p>
+            <p>Ruta 11 - km 564,5</p>
+            <p>Telefono: 03498 - 426759</p>
+        </div>
+        <div class="col-lg-6">
+            <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d54831.46534005896!2d-60.63153062043692!3d-30.803571392625344!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x944ad636536f3f4b%3A0x9ef247821b6e4e8b!2sPolideportivo%20Club%20Col%C3%B3n%20de%20San%20Justo!5e0!3m2!1ses!2sar!4v1660690785177!5m2!1ses!2sar"
+                width="75%" style="border:0; aspect-ratio: 1.2;" allowfullscreen="" loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+    </div>
+</div>
+
+
+
+<script>
+    var futbol = document.getElementsByClassName('futbol')[0];
+    var basket = document.getElementsByClassName('basket')[0];
+    var voley = document.getElementsByClassName('voley')[0];
+
+    bfutbol.addEventListener('click', function () {
+        basket.classList.remove('show');
+        voley.classList.remove('show');
+    });
+
+    bbasket.addEventListener('click', function () {
+        futbol.classList.remove('show');
+        voley.classList.remove('show');
+    });
+
+    bvoley.addEventListener('click', function () {
+        basket.classList.remove('show');
+        futbol.classList.remove('show');
+    });
+</script>

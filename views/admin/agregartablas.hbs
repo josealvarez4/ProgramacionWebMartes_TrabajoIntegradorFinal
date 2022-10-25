@@ -1,0 +1,91 @@
+<div class="container" style="margin: 2% auto">
+    {{#if mostrarbasket}}
+    <div class="row">
+        <div class="col-8 offset-2">
+            <h4 style="margin-bottom: 4%; text-align: center;">Agregar Equipo</h4>
+            <form action="/admin/tablas/agregarbasket" method="post" enctype="multipart/form-data">
+                <div class="row mb-3">
+                    <div class="col-4">Equipo<input type="text" class="form-control" placeholder="Equipo" name="equipo">
+                    </div>
+                    <div class="col text-center">Ptos<input type="text" class="form-control" placeholder="PTO"
+                            name="puntos"></div>
+                    <div class="col text-center">PJ<input type="text" class="form-control" placeholder="PJ"
+                            name="jugados"></div>
+                    <div class="col text-center">PG<input type="text" class="form-control" placeholder="PG"
+                            name="ganados"></div>
+                    <div class="col text-center">PP<input type="text" class="form-control" placeholder="PP"
+                            name="perdidos"></div>
+                    <div class="col text-center">Ppp<input type="text" class="form-control" placeholder="PPP"
+                            name="ppp"></div>
+                    <div class="col text-center">Pcpp<input type="text" class="form-control" placeholder="PCPP"
+                            name="pcpp"></div>
+                </div>
+                <div class="mb-3 text-center">
+                    <label>LOGO CLUB: <input type="file" name="imagen" id="imagen" /></label>
+                </div>
+                <div class="row">
+                    <div class="col text-left">
+                        <button type="submit" class="btn btn-primary">Guardar</button>
+                    </div>
+                    <div class="col text-end">
+                        <a href="../tablas"><button type="button" class="btn btn-primary">Volver</button></a>
+                    </div>
+                </div>
+            </form>
+            {{#if error}}
+            <h5 style="text-align: center;">{{message}}</h5>
+            {{/if}}
+        </div>
+    </div>
+    {{/if}}
+    {{#if mostrarhockey}}
+    <div class="row" style="margin: auto 15%;">
+        <div class="col-8 offset-2">
+            <h4 style="margin-bottom: 4%; text-align: center;">Agregar Equipo</h4>
+            <form action="/admin/tablas/agregarhockey" method="post" enctype="multipart/form-data">
+                <div class="row mb-3">
+                    <div class="col-9">Equipo<input type="text" class="form-control" placeholder="Equipo" name="equipo">
+                    </div>
+                    <div class="col-3">Puntos<input type="text" class="form-control" placeholder="Puntos" name="puntos">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col text-left">
+                        <button type="submit" class="btn btn-primary">Guardar</button>
+                    </div>
+                    <div class="col text-end">
+                        <a href="../tablas"><button type="button" class="btn btn-primary">Volver</button></a>
+                    </div>
+                </div>
+            </form>
+            {{#if error}}
+            <h5 style="text-align: center;">{{message}}</h5>
+            {{/if}}
+        </div>
+    </div>
+    {{/if}}
+    {{#if mostrarfutbol}}
+    <div class="row" style="margin: auto 15%;">
+        <div class="col-8 offset-2">
+            <h4 style="margin-bottom: 4%; text-align: center;">Agregar Equipo</h4>
+            <form action="/admin/tablas/agregarfutbol" method="post" enctype="multipart/form-data">
+                <div class="row mb-3">
+                    <div class="mb-3 text-center">
+                    <label>TABLA DE POSICIONES: <input type="file" name="imagenf" id="imagenf" /></label>
+                </div>
+                <div class="row">
+                    <div class="col text-left">
+                        <button type="submit" class="btn btn-primary">Guardar</button>
+                    </div>
+                    <div class="col text-end">
+                        <a href="../tablas"><button type="button" class="btn btn-primary">Volver</button></a>
+                    </div>
+                </div>
+            </form>
+            {{#if error}}
+            <h5 style="text-align: center;">{{message}}</h5>
+            {{/if}}
+        </div>
+    </div>
+    {{/if}}
+</div>

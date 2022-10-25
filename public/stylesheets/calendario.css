@@ -1,0 +1,40 @@
+/* BARRA DE NAVEGACION CALENDARIO*/
+.navegacion ul{
+    list-style-type: none;
+    border-bottom: 2px solid;
+    border-color: #DBDBDB;
+    padding: 1% 0;    
+}
+
+.navegacion li{
+    display: inline;
+    text-align: center;
+    color: black;
+    font-family: 'Oswald', sans-serif;
+    margin-right: 1.5%;
+}
+
+.navegacion li a{
+    color: #0000008c;
+    text-decoration: none;
+}
+
+.navegacion li a:hover{
+    background-color: rgb(255, 170, 170);
+}
+
+.navegacion li a.active{
+    color: black;
+}
+
+.cbasket, .chockey{
+    border-left: 2px solid;
+    border-color: #DBDBDB;
+    padding-left: 1.5%;
+}
+
+.meses p{
+    margin-top: 3%;
+    font-family: 'Oswald', sans-serif;
+    font-size: x-large;
+}
